@@ -1,0 +1,42 @@
+<div local-class="{{header}}">
+  {{#if (eq header "header")}}
+    <div local-class="details">
+      <h1 local-class="name">
+        Vintage Cailin
+      </h1>
+      <h2 local-class="title">
+        Clothes and Accessories
+      </h2>
+    </div>
+  {{/if}}
+  <div local-class="nav-bar">
+    {{#link-to 'home'
+      class=(local-class "nav-item")
+      activeClass=(local-class "active")}}
+      <h1 local-class="link-name">
+        Home
+      </h1>
+    {{/link-to}}
+    {{#link-to 'gallery'
+      class=(local-class "nav-item")
+      activeClass=(local-class "active")}}
+      <h1 local-class="link-name">
+        Gallery
+      </h1>
+    {{/link-to}}
+    {{#link-to 'blog'
+      class=(local-class "nav-item")
+      activeClass=(local-class "active")}}
+      <h1 local-class="link-name">
+        Blog
+      </h1>
+    {{/link-to}}
+    {{#link-to 'contact'
+      class=(local-class "nav-item")
+      activeClass=(local-class "active")}}
+      <h1 local-class="link-name">
+        Contact
+      </h1>
+    {{/link-to}}
+  </div>
+</div>

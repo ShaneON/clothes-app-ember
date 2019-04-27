@@ -1,0 +1,75 @@
+.header {
+  background-position: 50% 50%;
+  background-image: url('/assets/images/flowers.jpg');
+  background-size: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #e08bd8;
+  height: 140px;
+  padding: 0;
+  margin-bottom: 5px;
+  box-shadow: 0px 4px 11px -4px rgba(0,0,0,0.75);
+}
+
+.sticky {
+  background-position: 50% 56%;
+  background-image: url('/assets/images/flowers.jpg');
+  background-size: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #e08bd8;
+  height: 50px;
+  padding: 0;
+  margin-bottom: 5px;
+  box-shadow: 0px 4px 11px -4px rgba(0,0,0,0.75);
+}
+
+.details {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  letter-spacing: 1px;
+}
+
+.name {
+  color: #4c2c4a;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.title {
+  color: #723b6e;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.nav-bar {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90px;
+  text-decoration: none;
+}
+
+.link-name {
+  color: white;
+  font-size: 16px;
+}
+
+.active {
+  background-color: rgba(175, 109, 173, 0.7);
+}
