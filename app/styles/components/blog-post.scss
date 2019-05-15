@@ -1,0 +1,21 @@
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  padding: 50px;
+  border:1px solid #f4f4f4;
+  margin-top: 10px;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  color: #606366;
+}
+
+.text {
+  font-size: 14px;
+  color: #606366;
+}

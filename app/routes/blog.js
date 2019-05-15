@@ -11,6 +11,10 @@ export default Route.extend({
     this._checkScroll(controller);
   },
 
+  model() {
+    return this.store.findAll('blog-post');
+  },
+
   _checkScroll(controller) {
     window.addEventListener('scroll', (() => {
       let scrollPosition = Math.round(window.scrollY);

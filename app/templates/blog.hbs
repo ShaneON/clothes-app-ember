@@ -2,6 +2,11 @@
   header=header}}
 <div local-class="body">
   <div local-class="content">
-
+    <button>
+      New Blog Post
+    </button>
+    {{#each model as |blogPost|}}
+      {{blog-post blogPost=blogPost}}
+    {{/each}}
   </div>
 </div>
