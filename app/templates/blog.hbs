@@ -2,9 +2,9 @@
   header=header}}
 <div local-class="body">
   <div local-class="content">
-    <button>
-      New Blog Post
-    </button>
+    {{admin-bar
+      text="Click here to write a new blog post"
+      buttonText="New blog"}}
     {{#each model as |blogPost|}}
       {{blog-post blogPost=blogPost}}
     {{/each}}

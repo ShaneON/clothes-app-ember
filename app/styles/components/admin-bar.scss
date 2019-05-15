@@ -1,0 +1,22 @@
+.admin-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #79b8f7;
+}
+
+.text {
+  margin: 0;
+  font-size: 18px;
+  color: #606366;
+  font-weight: 400;
+}
+
+.button {
+  outline: none;
+  height: 20px;
+  margin-left: 10px;
+}
