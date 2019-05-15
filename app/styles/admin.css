@@ -5,3 +5,11 @@
   display: flex;
   justify-content: center;
 }
+
+.content {
+  margin-top: 200px;
+}
+
+.upload-button {
+  height: 20px;
+}
