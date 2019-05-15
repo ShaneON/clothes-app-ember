@@ -1,5 +1,5 @@
 .body {
-  height: 700px;
+  height: 100vh;
   width: 100%;
   background-color: #fcfcfc;
   display: flex;
@@ -8,8 +8,4 @@
 
 .content {
   margin-top: 200px;
-}
-
-.upload-button {
-  height: 20px;
 }

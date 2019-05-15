@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route';
+import { task } from 'ember-concurrency';
 // import { inject as service } from '@ember/service';
 
 export default Route.extend({
@@ -21,5 +22,32 @@ export default Route.extend({
         controller.set('header', "header");
       }
     }));
+  },
+
+  uploadPhoto: task(function * (file) {
+    let photo = this.store.createRecord('image', {
+      filename: get(file, 'name'),
+      filesize: get(file, 'size')
+    });
+
+    try {
+      file.readAsDataURL().then(function (url) {
+        if (get(photo, 'url') == null) {
+          set(photo, 'url', url);
+        }
+      });
+
+      let response = yield file.upload('http://localhost:3001/image-upload');
+      set(photo, 'url', response.headers.Location);
+      yield photo.save();
+    } catch (e) {
+      photo.rollback();
+    }
+  }).maxConcurrency(3).enqueue(),
+
+  actions: {
+    uploadImage(file) {
+      get(this, 'uploadPhoto').perform(file);
+    }
   }
 });
