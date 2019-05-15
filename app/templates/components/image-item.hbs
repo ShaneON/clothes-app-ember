@@ -1,1 +1,8 @@
-<img local-class="image" src="https://clothes-images.s3.eu-west-1.amazonaws.com/1557937106677">
+<div local-class="item">
+  {{#link-to 'gallery.image' image class=(local-class "link")}}
+    <img local-class="image" src="{{url}}">
+    <h1 local-class="name">
+      {{name}}
+    </h1>
+  {{/link-to}}
+</div>

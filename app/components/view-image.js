@@ -6,5 +6,5 @@ export default Component.extend({
 
   url: alias('image.url'),
   name: alias('image.name'),
-  caption: alias('image.name'),
+  caption: alias('image.caption'),
 });

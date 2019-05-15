@@ -2,9 +2,14 @@
   header=header}}
 <div local-class="body">
   <div local-class="content">
-    {{image-item}}
     <button local-class="upload-button">
       Upload
     </button>
+    <div local-class="image-container">
+      {{#each model as |image|}}
+        {{image-item image=image}}
+      {{/each}}
+    </div>
   </div>
 </div>
+{{outlet}}
