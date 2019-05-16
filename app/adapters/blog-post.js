@@ -5,4 +5,8 @@ export default DS.JSONAPIAdapter.extend({
   urlForFindAll(){
     return `http://localhost:3001/blog-posts`;
   },
+
+  urlForCreateRecord() {
+    return `http://localhost:3001/blog-post`;
+  },
 });

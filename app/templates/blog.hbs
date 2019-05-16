@@ -4,9 +4,11 @@
   <div local-class="content">
     {{admin-bar
       text="Click here to write a new blog post"
-      buttonText="New blog"}}
+      buttonText="New blog"
+      buttonClicked=(action send "newBlogPost")}}
     {{#each model as |blogPost|}}
       {{blog-post blogPost=blogPost}}
     {{/each}}
   </div>
 </div>
+{{outlet}}

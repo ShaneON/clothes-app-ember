@@ -25,5 +25,12 @@ export default Route.extend({
         controller.set('header', "header");
       }
     }));
+  },
+
+  actions: {
+    newBlogPost() {
+      let blogPost = this.store.createRecord('blog-post');
+      this.transitionTo('blog.blog-post', 'new');
+    }
   }
 });

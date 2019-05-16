@@ -12,7 +12,9 @@ Router.map(function() {
     this.route('image-upload');
     this.route('image', { path: 'image/:image_id'});
   });
-  this.route('blog');
+  this.route('blog', function() {
+    this.route('blog-post', { path: 'blog-post/:post_id'});
+  });
   this.route('admin');
   this.route('contact');
 });
