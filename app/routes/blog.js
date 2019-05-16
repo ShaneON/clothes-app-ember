@@ -29,15 +29,14 @@ export default Route.extend({
 
   actions: {
     editBlogPost(blogPost) {
-      if (blogPost) {
-        this.transitionTo('blog.blog-post', blogPost.id);
-      }
-      else {
-        let newBlogPost = this.store.createRecord('blog-post');
-        newBlogPost.save().then((newBlogPost) => {
-          this.transitionTo('blog.blog-post', newBlogPost.id);
-        });
-      }
+      this.transitionTo('blog.blog-post', blogPost.id);
+    },
+
+    newBlogPost() {
+      let newBlogPost = this.store.createRecord('blog-post');
+      newBlogPost.save().then((newBlogPost) => {
+        this.transitionTo('blog.blog-post', newBlogPost.id);
+      });
     },
   }
 });

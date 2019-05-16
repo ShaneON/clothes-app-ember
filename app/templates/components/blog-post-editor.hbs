@@ -1,1 +1,13 @@
-{{input type='textarea'}}
+<div local-class="editor">
+  <h1 local-class="title-label">
+    Title
+  </h1>
+  {{input type='textarea' value=title class=(local-class "input-title")}}
+  <h1 local-class="body-label">
+    Body
+  </h1>
+  {{textarea type='textarea' value=text class=(local-class "input-body")}}
+  <button local-class="save-button" onclick={{action saveClicked blogPost}}>
+    Save
+  </button>
+</div>

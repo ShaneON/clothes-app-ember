@@ -50,8 +50,8 @@ export default Route.extend({
   // }).maxConcurrency(3).enqueue(),
 
   actions: {
-    // uploadImage(file) {
+    uploadPhoto(file) {
     //   get(this, 'uploadPhoto').perform(file);
-    // },
+    },
   }
 });

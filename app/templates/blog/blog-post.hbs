@@ -1,5 +1,7 @@
 {{#modal-dialog
   translucentOverlay=true
   onClose=(action send "closeModal")}}
-  {{blog-post-editor post=model}}
+  {{blog-post-editor
+    saveClicked=(action send "updateBlogPost")
+    blogPost=model}}
 {{/modal-dialog}}

@@ -4,7 +4,8 @@
   <div local-class="content">
     {{admin-bar
       text="Click here to upload an image"
-      buttonText="Upload"}}
+      buttonText="Upload"
+      buttonClicked=(action send "uploadPhoto")}}
     <div local-class="image-container">
       {{#each model as |image|}}
         {{image-item image=image}}

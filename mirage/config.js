@@ -83,11 +83,38 @@ export default function() {
     }]
   });
 
-  this.post('http://localhost:3001/blog-post', () => {
+  this.get('http://localhost:3001/blog-post/:post_id', (req, res) => {
+    if (res.params.post_id === '5') {
+      return {
+        id: res.params.post_id,
+        title: null,
+        text: null
+      }
+    }
+    else {
+      return {
+        id: res.params.post_id,
+        title: 'Blog',
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+      }
+    }
+
+  });
+
+  this.post('http://localhost:3001/blog-posts', () => {
     return {
       id: 5,
-      title: 'Blog 5',
-      text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'
+      title: null,
+      text: null
+    };
+  });
+
+  this.put('http://localhost:3001/blog-post/:id', (req, res) => {
+    console.log(res)
+    return {
+      id: 5,
+      title: null,
+      text: null
     };
   });
 

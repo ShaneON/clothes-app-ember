@@ -1,0 +1,32 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px
+}
+
+.input-title {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.input-body {
+  width: 90%;
+  height: 70%;
+}
+
+.title-label {
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+}
+
+.body-label {
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+}
