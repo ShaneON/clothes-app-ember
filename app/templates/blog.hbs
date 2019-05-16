@@ -5,9 +5,11 @@
     {{admin-bar
       text="Click here to write a new blog post"
       buttonText="New blog"
-      buttonClicked=(action send "newBlogPost")}}
+      buttonClicked=(action send "editBlogPost")}}
     {{#each model as |blogPost|}}
-      {{blog-post blogPost=blogPost}}
+      {{blog-post
+        buttonClicked=(action send "editBlogPost")
+        blogPost=blogPost}}
     {{/each}}
   </div>
 </div>

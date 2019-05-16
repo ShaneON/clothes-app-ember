@@ -28,9 +28,16 @@ export default Route.extend({
   },
 
   actions: {
-    newBlogPost() {
-      let blogPost = this.store.createRecord('blog-post');
-      this.transitionTo('blog.blog-post', 'new');
-    }
+    editBlogPost(blogPost) {
+      if (blogPost) {
+        this.transitionTo('blog.blog-post', blogPost.id);
+      }
+      else {
+        let newBlogPost = this.store.createRecord('blog-post');
+        newBlogPost.save().then((newBlogPost) => {
+          this.transitionTo('blog.blog-post', newBlogPost.id);
+        });
+      }
+    },
   }
 });
