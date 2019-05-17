@@ -1,0 +1,16 @@
+<div local-class="blog-post">
+  <h1 local-class="title">
+    {{title}}
+  </h1>
+  <p local-class="text">
+    {{text}}
+  </p>
+  <div local-class="footer">
+    <button local-class="edit-button" onclick={{action editButtonClicked blogPost}}>
+      Edit
+    </button>
+    <button local-class="delete-button" onclick={{action deleteButtonClicked blogPost}}>
+      Delete
+    </button>
+  </div>
+</div>

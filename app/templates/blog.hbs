@@ -7,8 +7,9 @@
       buttonText="New blog"
       buttonClicked=(action send "newBlogPost")}}
     {{#each model as |blogPost|}}
-      {{blog-post
-        buttonClicked=(action send "editBlogPost")
+      {{blog-post-item
+        editButtonClicked=(action send "editBlogPost")
+        deleteButtonClicked=(action send "deleteBlogPost")
         blogPost=blogPost}}
     {{/each}}
   </div>

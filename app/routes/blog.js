@@ -28,6 +28,11 @@ export default Route.extend({
   },
 
   actions: {
+
+    deleteBlogPost(blogPost) {
+      blogPost.destroyRecord();
+    },
+
     editBlogPost(blogPost) {
       this.transitionTo('blog.blog-post', blogPost.id);
     },

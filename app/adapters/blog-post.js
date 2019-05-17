@@ -13,4 +13,8 @@ export default DS.JSONAPIAdapter.extend({
   urlForCreateRecord() {
     return `http://localhost:3001/blog-posts`;
   },
+
+  urlForDeleteRecord(id) {
+    return `http://localhost:3001/blog-post/${id}`;
+  },
 });
